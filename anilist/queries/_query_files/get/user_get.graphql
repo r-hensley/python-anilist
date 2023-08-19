@@ -15,6 +15,7 @@ query ($name: String) {
             anime {
                 nodes {
                     id
+                    idMal
                     title {
                         romaji
                         english
@@ -39,6 +40,7 @@ query ($name: String) {
             manga {
                 nodes {
                     id
+                    idMal
                     title {
                         romaji
                         english

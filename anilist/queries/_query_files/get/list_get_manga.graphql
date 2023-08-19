@@ -30,6 +30,7 @@ query ($user_id: Int, $page: Int = 1, $per_page: Int = 25) {
             media {
                 type
                 id
+                idMal
                 title {
                     romaji
                     english

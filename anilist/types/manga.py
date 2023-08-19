@@ -27,6 +27,7 @@ class Manga(Hashable):
         id: int,
         title: Dict,
         url: str,
+        idmal: int = None,
         chapters: int = None,
         description: str = None,
         status: str = None,
@@ -57,6 +58,8 @@ class Manga(Hashable):
         self.title = Title(
             romaji=title["romaji"], english=title["english"], native=title["native"]
         )
+        if idmal:
+            self.idmal = idmal
         if url:
             self.url = url
         if chapters:

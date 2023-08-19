@@ -27,6 +27,7 @@ class Anime(Hashable):
         id: int,
         title: Dict,
         url: str,
+        idmal: int = None,
         episodes: int = None,
         description: str = None,
         format: str = None,
@@ -58,6 +59,8 @@ class Anime(Hashable):
         self.title = Title(
             romaji=title["romaji"], english=title["english"], native=title["native"]
         )
+        if idmal:
+            self.idmal = idmal
         if url:
             self.url = url
         if episodes:
