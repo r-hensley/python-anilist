@@ -21,6 +21,7 @@ from .types import (
 def construct_manga_object(media) -> Manga:
     manga = Manga(
         id=media["id"],
+        idmal=media["idMal"],
         title=media["title"],
         url=media["siteUrl"],
         chapters=media["chapters"],
@@ -72,6 +73,7 @@ def construct_manga_object(media) -> Manga:
 def construct_anime_object(media: dict) -> Anime:
     anime = Anime(
         id=media["id"],
+        idmal=media["idMal"],
         title=media["title"],
         url=media["siteUrl"],
         episodes=media["episodes"],
@@ -270,6 +272,7 @@ def process_get_anime(data) -> Optional[Anime]:
             item = data["data"]["Page"]["media"][0]
             return Anime(
                 id=item["id"],
+                idmal=item["idMal"],
                 title=item["title"],
                 url=item["siteUrl"],
                 episodes=item["episodes"],
@@ -327,6 +330,7 @@ def process_get_manga(data) -> Optional[Manga]:
             item = data["data"]["Page"]["media"][0]
             return Manga(
                 id=item["id"],
+                idmal=item["idMal"],
                 title=item["title"],
                 url=item["siteUrl"],
                 chapters=item["chapters"],

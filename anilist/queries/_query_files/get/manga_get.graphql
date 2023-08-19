@@ -5,6 +5,7 @@ query($id: Int) {
     Page(page: 1, perPage: 1) {
         media(id: $id, type: MANGA) {
             id
+            idMal
             title {
                 romaji
                 english
@@ -101,6 +102,7 @@ query($id: Int) {
                 edges {
                     node {
                         id
+                        idMal
                         title {
                             romaji
                             english
